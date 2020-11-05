@@ -1,5 +1,8 @@
 # Bin collection schedules automation
 
+[![Update Status](https://github.com/xinye1/bin_calendar/workflows/scheduled-run/badge.svg)](https://github.com/xinye1/bin_calendar/actions?query=workflow%3Ascheduled-run)
+
+
 ## Intro
 
 This naively simple programme gets the schedules of the bin collection in my local area and updates a Google calendar. As I did not get permission to share the method to query the API outside of the designed route (on the council website) I will not expose any details, but the code does provide a framework of the process.
