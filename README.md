@@ -45,13 +45,17 @@ The following parameters are set for the CI
 Make gs_append.R executable
 
 ```bash
+# if running the script using cron
 chmod +x gs_update.R
+# alternatively in Github Actions run R command using Rscript{0}
 ```
 
-Add let crontab run at 8am every Monday
+Add let crontab run at 12am every day
 
 ```bash
-0 8 * * MON (./gs_update.R)
+# if running the script using cron
+0 0 * * * (./gs_update.R)
+# alternatively in Github Actions run R command using Rscript{0}
 ```
 
 ## Apps Script
