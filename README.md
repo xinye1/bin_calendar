@@ -35,14 +35,14 @@ The following parameters are set for the CI
 * `API_URL`
 * `ASSET_URL`
 * `GC_SA`
-* `GS_KEY_BIN`
+* `GS_KEY`
 
 #### Crontab
 
 Make gs_append.R executable
 
 ```bash
-chmod +x gs_append.R
+chmod +x gs_update.R
 ```
 
 Add let crontab run at 8am every Monday

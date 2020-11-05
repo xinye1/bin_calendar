@@ -1,7 +1,9 @@
 #!/usr/bin/env Rscript
 library(rvest)
 library(httr)
-library(tidyverse)
+library(dplyr)
+library(stringr)
+library(purrr)
 library(urltools)
 library(jsonlite)
 library(lubridate)
