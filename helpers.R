@@ -35,8 +35,9 @@ cleanBins <- function(raw_bin, asset_url) {
         map(function(y) {
           d <- (names(all_bins))[y] %>% as.Date()
           bins <- all_bins[[y]] %>% names
+          icons <- binIcon(bins)
           data.frame(
-            date = d, bin = bins, icon = binIcon(bins),
+            date = d, bin = bins, icon = icons,
             url = paste0(asset_url, icons, '-128.png'),
             stringsAsFactors = F)
         }) %>%
