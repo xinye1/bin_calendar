@@ -21,7 +21,7 @@ jobs:
       - name: Install R packages
         run: |
           install.packages(
-            c('rvest', 'httr', 'dplyr', 'stringr', 'purrr', 'urltools',
+            c('rvest', 'httr', 'dplyr', 'stringr', 'tidyr', 'purrr', 'urltools',
             'jsonlite', 'lubridate', 'googledrive', 'googlesheets4'))
         shell: Rscript {0}
       - name: Update Google Sheets
