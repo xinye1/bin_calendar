@@ -1,0 +1,25 @@
+name: scheduled-run
+on:
+  schedule:
+    - cron: "0 8 * * MON"
+jobs:
+  scheduled-run:
+    runs-on: ubuntu-latest
+    env:
+      UPRN: ${{ secrets.UPRN }}
+      API_URL: ${{ secrets.API_URL }}
+      ASSET_URL: ${{ secrets.ASSET_URL }}
+      GC_SA: ${{ secrets.GC_SA }}
+      GS_KEY: ${{ secrets.GS_KEY }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/setup-r@master
+      - name: Install R packages
+        run: |
+          install.packages(
+            c('rvest', 'httr', 'dplyr', 'stringr', 'purrr', 'urltools',
+            'jsonlite', 'lubridate', 'googledrive', 'googlesheets4'))
+        shell: Rscript {0}
+      - name: Update Google Sheets
+        run: source('gs_update.R')
+        shell: Rscript {0}
