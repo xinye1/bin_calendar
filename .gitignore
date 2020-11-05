@@ -1,0 +1,7 @@
+.httr-oauth
+creds/*
+.Rhistory
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
