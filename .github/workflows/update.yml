@@ -2,7 +2,7 @@ name: scheduled-run
 on:
   push:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 0 * * *'
 jobs:
   scheduled-run:
     runs-on: ubuntu-latest

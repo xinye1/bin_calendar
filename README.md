@@ -53,9 +53,7 @@ chmod +x gs_update.R
 Add let crontab run at 12am every day
 
 ```bash
-# if running the script using cron
-0 0 * * * (./gs_update.R)
-# alternatively in Github Actions run R command using Rscript{0}
+0 0 * * * # run this if using cron: (./gs_update.R)
 ```
 
 ## Apps Script
