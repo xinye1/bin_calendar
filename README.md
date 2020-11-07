@@ -32,13 +32,7 @@ A little effort is made to avoid being banned by the API by using a random **Use
 
 #### Secrets
 
-The following parameters are set for the CI
-
-* `UPRN`
-* `API_URL`
-* `ASSET_URL`
-* `GC_SA`
-* `GS_KEY`
+Set `UPRN` , `API_URL` , `ASSET_URL` , `GC_SA` , `GS_KEY` parameters for CI.
 
 #### Crontab
 
