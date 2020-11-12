@@ -49,8 +49,8 @@ cleanBins <- function(raw_bin, asset_url) {
 makeBinCal <- function(bins) {
   bins %>%
     mutate(
-      StartTime = ymd_hms(paste(date - days(1), '18:00:00')),
-      EndTime = StartTime + hours(5)) %>%
+      StartTime = today() - days(1) + hours(18),
+      EndTime = today() - days(1) + hours(24)) %>%
     group_by(StartTime, EndTime) %>%
     summarise(
       Title = paste0(
