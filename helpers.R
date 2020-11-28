@@ -37,7 +37,7 @@ cleanBins <- function(raw_bin, asset_url) {
           bins <- all_bins[[y]] %>% names
           icons <- binIcon(bins)
           data.frame(
-            date = d, bin = bins, icon = icons,
+            date_d = d, bin = bins, icon = icons,
             url = paste0(asset_url, icons, '-128.png'),
             stringsAsFactors = F)
         }) %>%
@@ -49,8 +49,8 @@ cleanBins <- function(raw_bin, asset_url) {
 makeBinCal <- function(bins) {
   bins %>%
     mutate(
-      StartTime = date - days(1) + hours(18),
-      EndTime = date - days(1) + hours(24)) %>%
+      StartTime = date_d - days(1) + hours(18),
+      EndTime = date_d - days(1) + hours(24)) %>%
     group_by(StartTime, EndTime) %>%
     summarise(
       Title = paste0(
