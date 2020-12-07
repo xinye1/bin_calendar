@@ -1,7 +1,9 @@
 .httr-oauth
+.vscode/*
 creds/*
 .Rhistory
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+*.Rproj
